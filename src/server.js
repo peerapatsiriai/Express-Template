@@ -16,7 +16,7 @@ Dotenv.config();
 app.use(Rount);
 
 // Set port จากไฟล์ .env
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3000;
 http.createServer(app).listen(PORT, () => {
   console.log(`\n[server]: Server is running at http://localhost:${PORT}`);
 });
